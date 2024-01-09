@@ -9,8 +9,6 @@ const path = require("path");
 // Load environment variables from .env file
 dotenv.config({ path: "../.env" });
 
-// Middleware
-
 // Create a middleware to check the database connection
 const checkDatabaseConnection = (req, res, next) => {
   // Check if the database connection is ready
