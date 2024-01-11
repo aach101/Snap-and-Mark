@@ -1,0 +1,291 @@
+[
+    {
+      "subName": "Engineering Mathematics",
+      "subCode": "ENG101",
+      "subType": "PE",
+      "sem": 1,
+      "dept": "Mathematics",
+      "type": "theory",
+      "credits": 3
+    },
+    {
+      "subName": "Introduction to Electrical Engineering",
+      "subCode": "ENG102",
+      "subType": "PC",
+      "sem": 1,
+      "dept": "Electrical Engineering",
+      "type": "theory",
+      "credits": 3
+    },
+    {
+      "subName": "Basic Mechanical Engineering",
+      "subCode": "ENG103",
+      "subType": "OE",
+      "sem": 1,
+      "dept": "Mechanical Engineering",
+      "type": "lab",
+      "credits": 2
+    },
+    {
+      "subName": "Engineering Drawing",
+      "subCode": "ENG104",
+      "subType": "FE",
+      "sem": 1,
+      "dept": "Civil Engineering",
+      "type": "tutorial",
+      "credits": 1
+    },
+    {
+      "subName": "Digital Electronics",
+      "subCode": "ENG201",
+      "subType": "PE",
+      "sem": 2,
+      "dept": "Electrical Engineering",
+      "type": "theory",
+      "credits": 3
+    },
+    {
+      "subName": "Circuit Analysis",
+      "subCode": "ENG202",
+      "subType": "PC",
+      "sem": 2,
+      "dept": "Electrical Engineering",
+      "type": "theory",
+      "credits": 3
+    },
+    {
+      "subName": "Engineering Mechanics",
+      "subCode": "ENG203",
+      "subType": "OE",
+      "sem": 2,
+      "dept": "Mechanical Engineering",
+      "type": "lab",
+      "credits": 2
+    },
+    {
+      "subName": "Introduction to Computer Science",
+      "subCode": "ENG204",
+      "subType": "FE",
+      "sem": 2,
+      "dept": "Computer Science",
+      "type": "tutorial",
+      "credits": 1
+    },
+    {
+      "subName": "Electrical Power Systems",
+      "subCode": "ENG301",
+      "subType": "PE",
+      "sem": 3,
+      "dept": "Electrical Engineering",
+      "type": "theory",
+      "credits": 3
+    },
+    {
+      "subName": "Electronics and Communication Engineering",
+      "subCode": "ENG302",
+      "subType": "PC",
+      "sem": 3,
+      "dept": "Electrical Engineering",
+      "type": "theory",
+      "credits": 3
+    },
+    {
+      "subName": "Thermodynamics and Fluid Mechanics",
+      "subCode": "ENG303",
+      "subType": "OE",
+      "sem": 3,
+      "dept": "Mechanical Engineering",
+      "type": "lab",
+      "credits": 2
+    },
+    {
+      "subName": "Programming in CPP",
+      "subCode": "ENG304",
+      "subType": "FE",
+      "sem": 3,
+      "dept": "Computer Science",
+      "type": "tutorial",
+      "credits": 1
+    },
+    {
+      "subName": "Control Systems",
+      "subCode": "ENG401",
+      "subType": "PE",
+      "sem": 4,
+      "dept": "Electrical Engineering",
+      "type": "theory",
+      "credits": 3
+    },
+    {
+      "subName": "Digital Signal Processing",
+      "subCode": "ENG402",
+      "subType": "PC",
+      "sem": 4,
+      "dept": "Electrical Engineering",
+      "type": "theory",
+      "credits": 3
+    },
+    {
+      "subName": "Mechanical Vibrations",
+      "subCode": "ENG403",
+      "subType": "OE",
+      "sem": 4,
+      "dept": "Mechanical Engineering",
+      "type": "lab",
+      "credits": 2
+    },
+    {
+      "subName": "Data Structures and Algorithms",
+      "subCode": "ENG404",
+      "subType": "FE",
+      "sem": 4,
+      "dept": "Computer Science",
+      "type": "tutorial",
+      "credits": 1
+    },
+    {
+      "subName": "Electromagnetic Theory",
+      "subCode": "ENG501",
+      "subType": "PE",
+      "sem": 5,
+      "dept": "Electrical Engineering",
+      "type": "theory",
+      "credits": 3
+    },
+    {
+      "subName": "Machine Learning",
+      "subCode": "ENG502",
+      "subType": "PC",
+      "sem": 5,
+      "dept": "Computer Science",
+      "type": "theory",
+      "credits": 3
+    },
+    {
+      "subName": "Mechanical Design",
+      "subCode": "ENG503",
+      "subType": "OE",
+      "sem": 5,
+      "dept": "Mechanical Engineering",
+      "type": "lab",
+      "credits": 2
+    },
+    {
+      "subName": "Operating Systems",
+      "subCode": "ENG504",
+      "subType": "FE",
+      "sem": 5,
+      "dept": "Computer Science",
+      "type": "tutorial",
+      "credits": 1
+    },
+    {
+      "subName": "Digital Communication",
+      "subCode": "ENG601",
+      "subType": "PE",
+      "sem": 6,
+      "dept": "Electrical Engineering",
+      "type": "theory",
+      "credits": 3
+    },
+    {
+      "subName": "Artificial Intelligence",
+      "subCode": "ENG602",
+      "subType": "PC",
+      "sem": 6,
+      "dept": "Computer Science",
+      "type": "theory",
+      "credits": 3
+    },
+    {
+      "subName": "Fluid Mechanics and Machinery",
+      "subCode": "ENG603",
+      "subType": "OE",
+      "sem": 6,
+      "dept": "Mechanical Engineering",
+      "type": "lab",
+      "credits": 2
+    },
+    {
+      "subName": "Database Management Systems",
+      "subCode": "ENG604",
+      "subType": "FE",
+      "sem": 6,
+      "dept": "Computer Science",
+      "type": "tutorial",
+      "credits": 1
+    },
+    {
+      "subName": "Power System Analysis",
+      "subCode": "ENG701",
+      "subType": "PE",
+      "sem": 7,
+      "dept": "Electrical Engineering",
+      "type": "theory",
+      "credits": 3
+    },
+    {
+      "subName": "Computer Networks",
+      "subCode": "ENG702",
+      "subType": "PC",
+      "sem": 7,
+      "dept": "Computer Science",
+      "type": "theory",
+      "credits": 3
+    },
+    {
+      "subName": "Mechanical Heat Transfer",
+      "subCode": "ENG703",
+      "subType": "OE",
+      "sem": 7,
+      "dept": "Mechanical Engineering",
+      "type": "lab",
+      "credits": 2
+    },
+    {
+      "subName": "Software Engineering",
+      "subCode": "ENG704",
+      "subType": "FE",
+      "sem": 7,
+      "dept": "Computer Science",
+      "type": "tutorial",
+      "credits": 1
+    },
+    {
+      "subName": "High Voltage Engineering",
+      "subCode": "ENG801",
+      "subType": "PE",
+      "sem": 8,
+      "dept": "Electrical Engineering",
+      "type": "theory",
+      "credits": 3
+    },
+    {
+      "subName": "Web Development",
+      "subCode": "ENG802",
+      "subType": "PC",
+      "sem": 8,
+      "dept": "Computer Science",
+      "type": "theory",
+      "credits": 3
+    },
+    {
+      "subName": "Refrigeration and Air Conditioning",
+      "subCode": "ENG803",
+      "subType": "OE",
+      "sem": 8,
+      "dept": "Mechanical Engineering",
+      "type": "lab",
+      "credits": 2
+    },
+    {
+      "subName": "Computer Graphics",
+      "subCode": "ENG804",
+      "subType": "FE",
+      "sem": 8,
+      "dept": "Computer Science",
+      "type": "tutorial",
+      "credits": 1
+    }
+  ]
+  
