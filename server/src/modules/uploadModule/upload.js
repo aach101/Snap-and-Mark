@@ -22,7 +22,7 @@ const upload = multer({
     //     fileSize: 10
     // }
 })
-router.post("/upload", upload.single('profile'), (req, res) => {
+router.post("/", upload.single('profile'), (req, res) => {
 
     res.json({
         success: 1,

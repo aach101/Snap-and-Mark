@@ -40,7 +40,7 @@ mongoose.connection.on("connected", () => {
 // CORS configuration
 app.use(
   cors({
-    origin: ["http://localhost:5173", "https://nitjtt.netlify.app"], // Change this to your allowed origins or '*' to allow all origins
+     origin: "*"  ,//["http://localhost:3000", "https://frontendams.onrender.com"], // Change this to your allowed origins or '*' to allow all origins
     methods: "GET,HEAD,PUT,PATCH,POST,DELETE",
     optionsSuccessStatus: 204,
     allowedHeaders: "Content-Type",
