@@ -48,10 +48,10 @@ app.use(
   })
 );
 
-// default route
-// app.get('/', (req, res) => {
-//     res.send('Hello World!');
-// })
+default route
+app.get('/', (req, res) => {
+    res.send('Hey Backend for Snap and Mark is deployed here!');
+})
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
