@@ -48,7 +48,7 @@ app.use(
   })
 );
 
-default route
+//default route
 app.get('/', (req, res) => {
     res.send('Hey Backend for Snap and Mark is deployed here!');
 })
