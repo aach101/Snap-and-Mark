@@ -1,16 +1,11 @@
 const express = require("express");
 const router = express.Router();
-const reader = require('xlsx');
-const multer = require('multer');
-const fs = require('fs');
+const app = express();
+const multer = require("multer");
+const path = require("path");
 
-const modelPaths = {
-  faculty: "../../models/faculty",
-  subject: "../../models/subject",
-  attendance:"../../models/attendance"
-};
+// storage engine 
 
-// Set up Multer for file uploads
 const storage = multer.diskStorage({
   destination: (req, file, cb) => {
     cb(null, 'uploads/');
@@ -20,76 +15,31 @@ const storage = multer.diskStorage({
   }
 });
 
-const upload = multer({ storage });
 
-// Functions for different objectTypes to find duplicates
-async function findDuplicatesByType(objectType, code) {
-  if (objectType === 'subject') {
-    return await findDuplicateSubjects(code);
-  }
-  // else if (objectType === 'anotherType') {
-  //   return await findDuplicatesForAnotherType(code);
-  // }
-  return [];
+const upload = multer({
+    storage: storage,
+    // limits: {
+    //     fileSize: 10
+    // }
+})
+router.post("/upload", upload.single('profile'), (req, res) => {
+
+    res.json({
+        success: 1,
+        profile_url: `http://localhost:8010/profile/${req.file.filename}`
+    })
+})
+
+function errHandler(err, req, res, next) {
+    if (err instanceof multer.MulterError) {
+        res.json({
+            success: 0,
+            message: err.message
+        })
+    }
 }
-
-router.post('/:objectType', upload.single('csvFile'), async (req, res) => {
-  
-  const filePath = req.file.path;
-  const file = reader.readFile(filePath);
-  const sheetsArray = file.SheetNames;
-  const duplicateSet = new Map(); // Use a Map to store unique duplicates for each object type
-  const objectType = req.params.objectType;
-
-  for (let i = 0; i < sheetsArray.length; i++) {
-    const sheet = reader.utils.sheet_to_json(file.Sheets[sheetsArray[i]]);
-    const mongooseSchema = require(modelPaths[objectType]);
-
-    for (const row of sheet) {
-      const currentCode = req.body.code;
-      row.code=currentCode;
-
-      const duplicates = await findDuplicatesByType(objectType, currentCode);
-
-      if (duplicates.length > 0) {
-        if (!duplicateSet.has(objectType)) {
-          duplicateSet.set(objectType, new Set());
-        }
-
-        duplicates.forEach((duplicate) => {
-          duplicateSet.get(objectType).add(duplicate);
-        });
-      }
-    
-
-      const schema = new mongooseSchema(row);
-      schema.save();
-    }
-  }
-
-  fs.unlink(filePath, (err) => {
-    if (err) {
-      console.error(err);
-      res.status(500).send('Error deleting the file');
-    } else {
-      const duplicatesObject = {};
-      duplicateSet.forEach((value, key) => {
-        duplicatesObject[key] = Array.from(value);
-      });
-
-      const objectKeys = Object.keys(duplicatesObject);
-      let message = '';
-
-      if (objectKeys.length > 0) {
-        objectKeys.forEach((key) => {
-          message += `Duplicate entries detected for ${key}: ${duplicatesObject[key]}\n`;
-        });
-        res.status(200).json({ message });
-      } else {
-        res.send(`CSV file uploaded, data saved to MongoDB for ${objectType}, and file deleted.`);
-      }
-    }
-  });
-});
-
+router.use(errHandler);
+// app.listen(4000, () => {
+//     console.log("server up and running");
+// })
 module.exports = router;
